@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <script src="hideOddRows.js"></script> 
+
+</head>
+
+
+
+<body>
+
+<input type="button" style="background-color:#7FFFD4;BORDER:1px solid RED;" value="Hide" color="green" onClick=HideRows()></input>
+
+<input type="button" style="background-color:#7FFFD4;BORDER:1px solid RED;" value="Show" color="green" onClick=ShowRows()></input>
+<table id="mytable" border ="1">
+<tr>
+<td>
+Hi
+</td>
+</tr>
+
+<tr>
+
+<td>
+Bye
+</td>
+</tr>
+<tr>
+<td>
+Hi
+</td>
+</tr>
+
+<tr>
+
+<td>
+Bye
+</td>
+</tr><tr>
+<td>
+Hi
+</td>
+</tr>
+
+<tr>
+
+<td>
+Bye
+</td>
+</tr><tr>
+<td>
+Hi
+</td>
+</tr>
+
+<tr>
+
+<td>
+Bye
+</td>
+</tr>
+</table>
+<script>
+function HideRows(el) {
+
+
+var rows = document.getElementById('mytable').getElementsByTagName('tr');
+for(var x = 0; x < rows.length; x++) {
+    rows[x].className = (x % 2 == 0) ? 'even' : 'odd';
+
+    if(x % 2)
+          rows[x].style.display = 'none';
+    else
+          rows[x].style.display = '';
+}
+}
+
+function ShowRows(el) {
+
+
+var rows = document.getElementById('mytable').getElementsByTagName('tr');
+for(var x = 0; x < rows.length; x++) {
+    rows[x].className = (x % 2 == 0) ? 'even' : 'odd';
+
+    if(x % 2)
+          rows[x].style.display = '';
+    else
+          rows[x].style.display = '';
+}
+
+}
+
+
+</script>
+
+</body>
+</html>
